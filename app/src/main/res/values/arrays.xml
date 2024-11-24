@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="dropdown_mode">
+    <item>LOW_LATENCY</item>
+    <item>BALANCED</item>
+    <item>LOW_POWER</item>
+    </string-array>
+
+    <string-array name="dropdown_mode_values">
+        <item>LOW_LATENCY</item>
+        <item>BALANCED</item>
+        <item>LOW_POWER</item>
+    </string-array>
+</resources>

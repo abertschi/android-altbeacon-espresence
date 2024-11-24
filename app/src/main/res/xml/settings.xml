@@ -1,0 +1,92 @@
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <PreferenceCategory
+        android:title="Announcement"
+        app:allowDividerAbove="false"
+        app:allowDividerBelow="false"
+        >
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="power"
+            android:title="Power"
+            app:summary="Advertise beacon" />
+
+        <DropDownPreference
+            app:key="advertisement_mode"
+            app:title="Advertise Mode"
+            app:summary="Chose Power Mode"
+            app:defaultValue="LOW_LATENCY"
+            app:entries="@array/dropdown_mode"
+            app:useSimpleSummaryProvider="true"
+            app:entryValues="@array/dropdown_mode_values" />
+
+        <EditTextPreference
+            app:defaultValue="-50"
+            app:dialogTitle="Set Transmit Power (lower is higher)"
+            app:key="tx_power"
+            app:summary=""
+            app:title="Transmit Power"
+            app:useSimpleSummaryProvider="true" />
+
+        <EditTextPreference
+            app:dialogTitle="Set Beacon ID"
+            app:key="beacon_id"
+            app:summary=""
+            app:title="Identifier"
+            app:useSimpleSummaryProvider="true" />
+
+        <EditTextPreference
+            app:defaultValue="0"
+            app:dialogTitle="Set Major"
+            app:key="beacon_major"
+            app:summary=""
+            app:title="Major"
+            app:useSimpleSummaryProvider="true" />
+
+        <EditTextPreference
+            app:defaultValue="0"
+            app:dialogTitle="Set Minor"
+            app:key="beacon_minor"
+            app:summary=""
+            app:title="Minor"
+            app:useSimpleSummaryProvider="true" />
+    </PreferenceCategory>
+
+
+    <PreferenceCategory
+        android:title="Restriction"
+        app:allowDividerAbove="false"
+        app:allowDividerBelow="false"
+        >
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="wifi_only"
+            android:title="WIFI only"
+            app:summary="Announce only in WIFI" />
+        <EditTextPreference
+            app:defaultValue=""
+            app:dialogTitle="Enter SSIDs (comma separated)"
+            app:key="ssid"
+            app:summary="Comma separated list"
+            app:title="WIFI SSID"
+            app:useSimpleSummaryProvider="true" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Status"
+        app:allowDividerAbove="false"
+        app:allowDividerBelow="false"
+        >
+    <Preference
+        app:key="beacon_summary"
+        app:title="Beacon"
+        app:summary="iBeacon:00000000-0000-0000-0000-000000000000-0-0" ></Preference>
+
+        <Preference
+            app:key="service_status"
+            app:title="Service"
+            app:summary="running" ></Preference>
+    </PreferenceCategory>
+</PreferenceScreen>
