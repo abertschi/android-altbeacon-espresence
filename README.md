@@ -9,6 +9,6 @@ Features
 
 Tested on a Pixel 8, Android 15
 
-<p align="center">
-    <img src="./.github/screenshot.jpg" alt="screenshot" width="600"/>
+<p>
+    <img src="./.github/screenshot.jpg" alt="screenshot" height="700"/>
 </p>
